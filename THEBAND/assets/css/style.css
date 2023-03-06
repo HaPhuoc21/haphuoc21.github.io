@@ -1,0 +1,457 @@
+/* Header */
+/* Navigation */
+.header-nav {
+    display:inline-block;
+}
+.header-nav,
+.header-nav__subnav {
+    list-style-type: none;;
+}
+.header-nav li {
+    position:relative;
+}
+.header-nav > li {
+    display:inline-block;
+}
+.header-nav li a {
+    text-decoration:none;
+    line-height:46px;
+    padding: 0 24px;
+    display:inline-block;
+}
+.header-nav > li > a {
+    color:var(--white-color);
+    text-transform:uppercase;
+
+}
+.header-nav > li:hover > a {
+    color:var(--black-color);
+    background-color:var(--grey-color);
+}
+/* Icon sau item More */
+.header-nav__icons {
+    font-size:14px;
+}
+.header-nav .header-nav__subnav {
+    display:none;
+    position:Absolute;
+    background-color:var(--white-color);
+    box-shadow: 0 0 10px rgba( 0, 0, 0, 0.3);
+    min-width:160px;
+    top:100%;
+    left:0;
+}
+.header-nav .header-nav__subnav a {
+    color:var(--black-color);
+    padding:0 12px;
+    line-height:38px;
+}
+.header-nav .header-nav__subnav li:hover {
+    color:var(--black-color);
+    background-color:var(--grey-color);
+}
+/* Hover vào item More ( Nav ) sẽ hiện lên Subnav */
+.header-nav li:hover .header-nav__subnav {
+    display:block;
+}
+/* Search button */
+.search-btn {
+    float:right;
+    line-height:46px;
+    display:block;
+}
+.search-btn--icons {
+    padding:0 21px;
+    font-size:20px;
+    color:var(--white-color);
+}
+.search-btn--icons:hover {
+    background-color:var(--red-color);
+    cursor:pointer;
+    padding: 13px 21px;
+}
+
+/* Slide */
+.slideshow-list {
+    max-width:2000px;
+    position:relative;
+    margin:auto;
+}
+/* Ẩn các slide */
+.slideshow-item {
+    display:none;
+}
+.slideshow-item--text {
+    color:var(--white-color);
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.slideshow-btn--l-r {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .slideshow-btn--l-r:hover {
+    background-color:var(--grey-color);
+}
+/* Hiệu ứng khi chuyển đổi giữa các nội dung slide */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.3s;
+    animation-name: fade;
+    animation-duration: 0.3s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity:0.4;
+    }
+    to {
+        opacity:1;
+    }
+}
+@keyframes fade {
+    from {
+        opacity:0.4;
+    }
+    to {
+        opacity:1;
+    }
+}
+/* Ẩn các nút chuyển nội dung slide đi */
+.slideshow-btn--l-r {
+    display:none;
+}
+
+/* Content */
+.content-section {
+    width:800px;
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:64px 0;
+}
+.content-section--heading {
+    text-align:center;
+    font-size:30px;
+    font-weight:500;
+    letter-spacing:4px;
+}
+.content-section--sub-heading {
+    text-align:center;
+    font-size:15px;
+    margin-top:25px; 
+    font-style:italic;
+    opacity:0.6;
+}
+.content-section--about-text {
+    margin-top:25px;
+    font-size:15px;
+    text-align:justify;
+    line-height:1.4;
+}
+/* Team section */
+.content-member__list {
+    margin-top:32px;
+    margin-bottom:96px;
+    overflow:hidden;
+}
+.content-member__item {
+    text-align:center;
+}
+.content-member__item--name {
+    font-size:15px;
+}
+.content-member__item--img {
+    margin-top:15px;
+    width:154px;
+    border-radius:4px;
+}
+/* Tour tickets */
+.content__tour-section {
+    background-color:var(--black-color);
+}
+/* Tickets list */
+.tickets-list {
+    background-color:var(--white-color);
+    margin-top:40px;
+}
+.tickets-list li {
+    font-size:15px;
+    padding:11px 6px;
+    border-bottom:1px solid var(--grey-color);
+    color:#757575;
+    list-style-type: none;
+}
+.content__tickets--sold-out {
+    background-color:var(--red-color);
+    color:var(--white-color);
+    padding:3px 4px;
+    margin-left:16px;
+}
+.content__tickets--quantity {
+    float:right;
+    width:24px;
+    height:24px;
+    background-color:var(--black-color);
+    color:var(--white-color);
+    border-radius:50%;
+    text-align:center;
+    line-height:24px;
+    margin-top:-3px;
+}
+/* Tour places */
+.content__place-list {
+    margin-top:32px;
+    padding-bottom:48px;
+    overflow:hidden;
+}
+
+.content__place-item--img {
+    width:100%;
+    display:block;
+}
+.content__place-item--img:hover {
+    opacity:0.6;
+}
+.content__place-item--body {
+    background-color:var(--white-color);
+    padding:16px;
+    font-size:15px;
+}
+.content__place--heading {
+    font-size:15px;
+    font-weight:600;
+}
+.content__place--time {
+    margin-top:15px; 
+    color:#757575;
+}
+.content__place--desc {
+    margin-top:15px;
+    line-height:1.4;
+}
+/* Nút mua vé */
+.content__place--buy-btn {
+    color:var(--white-color);
+    background-color:var(--black-color);
+    text-decoration:none;
+    padding:11px 16px;
+    display:inline-block;
+    margin-top:15px;
+}
+.content__place--buy-btn:hover {
+    cursor:pointer;
+    background-color:var(--grey-color);
+    color:var(--black-color);
+}
+/* Contact form */
+.contact-content {
+    margin-top:48px;
+    overflow:hidden;
+}
+/* Contact info */
+.contact-info {
+    font-size:18px;
+    line-height:1.5;
+}
+.contact-info i[class*="fa-"] {
+    width:30px;
+    display:inline-block;
+}
+/* Contact form */
+.contact-form {
+    font-size:15px;
+}
+/* .contact-form .contact__form-control {
+    padding:11px; 
+    border:1px solid var(--grey-color); 
+    width:100%;
+    outline:none;
+} */
+.contact__form--name-email-control {
+    padding:11px;
+    border:1px solid var(--grey-color);
+    max-width:100%;
+    outline:none
+}
+.contact__form--tingting-control {
+    padding:11px;
+    border:1px solid var(--grey-color);
+    max-width:100%;
+    outline:none;
+}
+/* Nút gửi tin nhắn */
+.contact-form .form-submit--btn {
+    background-color: var(--black-color); 
+    color:var(--white-color); 
+    border:1px solid var(--black-color); 
+    padding:10px 16px; 
+    float:right;
+    margin-right:16px;
+    
+}
+.contact-form .form-submit--btn:hover {
+    cursor:pointer;
+    background-color:var(--grey-color);
+    color:var(--black-color);
+}
+/* Map */
+.content__map-section img {
+    width:100%;
+    filter:grayscale(50%);
+}
+
+/* Footer */
+.footer__social-list {
+    font-size:24px;
+}
+.footer__social-list a {
+    color:rgba(0, 0, 0, 0.6); 
+    text-decoration:none; 
+}
+.footer__social-list a:hover {
+    color:rgba(0, 0, 0, 0.3);
+}
+
+.footer__copyright {
+    font-size:14px;
+    margin-top:15px;
+    color:rgba(0, 0, 0, 0.6);
+}
+.footer__copyright a {
+    text-decoration:none;
+    color:rgba(0, 0, 0, 0.6);
+}
+.footer__copyright a:hover {
+    color:#007fff;
+    cursor:pointer;
+}
+
+/* Giao diện Mua vé - Buy Tickets */
+.modal {
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color:rgba(0, 0, 0, 0.4);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.modal__container {
+    background-color:var(--white-color);
+    width:900px;
+    max-width:calc(100% - 32px);
+    min-height:200px;
+    position:relative;
+    animation: modalFadeIn ease 0.5s;
+}
+.modal-close {
+    position:absolute;
+    top:0;
+    right:0;
+    color:var(--white-color);
+    padding:12px;
+    cursor:pointer;
+}
+.modal-close:hover {
+    opacity:0.4;
+    color:var(--black-color);
+    background-color:var(--grey-color);
+}
+.modal-header {
+    background-color:var(--modal-buy-tickets-color);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    color:var(--white-color);
+    height:130px;
+}
+.modal-header--icons {
+    margin-right:16px;
+}
+.modal-body {
+    padding:16px;
+}
+.modal-label {
+    display:block;
+    font-size:15px;
+    margin-bottom:12px;
+}
+.modal-input {
+    font-size:15px;
+    border:1px solid var(--grey-color);
+    width:100%;
+    padding:10px;
+    margin-bottom:24px;
+}
+/* Nút Mua vé - Pay */
+.buy-tickets--btn {
+    background-color:var(--modal-buy-tickets-color);
+    border:none;
+    width:100%;
+    font-size:15px;
+    text-transform:uppercase;
+    padding:18px;
+    cursor:pointer;
+}
+.buy-tickets--btn:hover {
+    opacity:0.6;
+}
+.modal-footer {
+    padding:16px;
+    text-align:right;
+}
+.modal-footer a {
+    color:#2196F3;
+}
+/* Ẩn giao diện Modal */
+.modal {
+    display:none;
+}
+/* Liên quan đến Javascript, cơ chế hoạt động như sau: Thêm class (.open / lúc này bên
+trong class đang có thuộc tính " display:flex") vào tên class khác thì khi bấm vào nút 
+Buy Tickets sẽ hiện lên giao diện Modal; còn khi bấm vào dấu X - Close để đóng giao diện
+ thì nó sẽ xóa class (.open / lúc này thuộc tính " display:flex" sẽ chuyển thành "display:none")
+đi */
+.modal.open {
+    display:flex;
+}
+
+/* Hiệu ứng khi bật giao diện Mua vé - Buy Tickets */
+@keyframes modalFadeIn {
+    from {
+        opacity:0;
+        transform:translateY(-140px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile: Navigation Button */
+.mobile--nav-btn {
+    float:right;
+    padding:0 21px;
+    line-height:46px;
+}
+.mobile--nav-btn:hover {
+    background-color:var(--grey-color);
+}
+.mobile--nav-btn-icons {
+    font-size:20px;
+    color:var(--white-color);
+}
+

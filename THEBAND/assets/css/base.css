@@ -1,0 +1,92 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+html {
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
+}
+
+:root {
+    --black-color:#000;
+    --white-color:#fff;
+    --text-color:#333;
+    --red-color:#f44336;
+    --grey-color:#ccc;
+    --modal-buy-tickets-color:#009688;
+}
+
+.text-white {
+    color:var(--white-color) !important;
+}
+.text-center {
+    text-align:center !important;
+}
+.mt-8 {
+    margin-top:8px !important;
+}
+.mt-16 {
+    margin-top:16px !important;
+}
+.mt-32 {
+    margin-top: 32px !important;
+}
+.ml-8 {
+    margin-left:16px !important;
+}
+
+.row {
+    margin-left:-8px;
+    margin-right:-8px;
+}
+.row::after {
+    Content:"";
+    Display:block;
+    Clear:both;
+}
+.col {
+    float:left;
+    padding-left:8px;
+    padding-right:8px;
+}
+.col-third {
+    width:33.33333%;
+}
+.col-half {
+    width:50%;
+}
+.col-full {
+    width:100%;
+}
+.w-50 {
+    width:50% !important;
+}
+.w-96 {
+    width:96% !important;
+}
+.mobile-dis {
+    margin-top:48px !important;
+}
+#main {
+    overflow:hidden;
+}
+
+#header {
+    height:46px;
+    background-color:var(--black-color);
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1;
+}
+#slide {
+    margin-top:46px;
+}
+
+#footer {
+    padding: 64px 16px; 
+    text-align:center;
+}

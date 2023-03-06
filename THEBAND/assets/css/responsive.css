@@ -1,0 +1,96 @@
+/* Mobile: width <= 740px */
+@media only screen and (max-width:46.25em) {
+    #header {
+        overflow:hidden;
+    }
+    .header-nav > li {
+        display:block;
+    }
+    .header-nav > li > a {
+        display:block;
+    }
+    .header-nav .header-nav__subnav {
+        position:initial;
+    }
+    .search-btn {
+        display:none;
+    }
+    .mobile--nav-btn:hover {
+        cursor:pointer;
+    }
+    .content-section {
+        padding: 0 16px;
+    }
+    .content-section--about-text {
+        padding: 0 16px;
+    }
+    .member-item--mobile {
+        margin-top:30px;
+        width:100%;
+    }
+    .content-member__item--img {
+        width:50%;
+        margin-bottom:12px;
+    }
+    .s-col-full {
+        width:100%;
+    }
+    .content__place--buy-btn {
+        width:100% !important;
+    }
+    .mobile-contact {
+        margin-top:32px;
+    }
+    .contact-form {
+        display:none;
+    }
+    .mobile-contact-form {
+        margin-top:16px;
+        margin-bottom:32px;
+        font-size:16px;
+    }
+    .m-contact-form__controls {
+        padding:12px;
+        border:1px solid var(--grey-color);
+        width:100%;
+        max-width:100%;
+        outline:none;
+    }
+    .m-contact-form__submit-btn {
+        padding:10px 16px;
+        width:100%;
+        max-width:100%;
+        background-color:var(--black-color);
+        color:var(--white-color);
+        border:1px solid var(--black-color);
+    }
+    .m-contact-form__submit-btn:hover {
+        background-color:var(--grey-color);
+        color:var(--black-color);
+        cursor:pointer;
+    }
+    .content__map-section {
+        margin-top:48px;
+    }
+
+}
+
+/* Table: width >= 740px and <= 1023px */
+@media only screen and (min-width:46.25em) and (max-width:63.9375em) {
+    .mobile--nav-btn {
+        display:none;
+    }
+    .mobile-contact-form {
+        display:none;
+    }
+}
+
+/* PC: width >= 1023px */
+@media only screen and (min-width:63.9375em) {
+    .mobile--nav-btn {
+        display:none;
+    }
+    .mobile-contact-form {
+        display:none;
+    }
+}
