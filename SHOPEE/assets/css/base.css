@@ -1,0 +1,284 @@
+:root {
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#ccc;
+    --red-color:#FF0000;
+    --primary-color:#EE4D2D;
+    --primary-rgba-color:rgba(238, 75, 43, 0.08);
+    --border-color:#dbdbdb;
+    --navbar-height:34px;
+    --header-height:120px;
+    --header-with-search-height:calc(var(--header-height)- var(--navbar-height));
+}
+
+* {
+    box-sizing:inherit;
+}
+
+html {
+    font-size:62.5%;
+    line-height:1.6rem;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.width-50 {
+    width:50px !important;
+}
+.ml-8 {
+    margin-left:8px !important;
+}
+.mr-4 {
+    margin-right:4px !important;
+}
+.mr-8 {
+    margin-right:8px !important;
+}
+.ml-64 {
+    margin-left:64px !important;
+}
+.bd-top-1 {
+    border-top:1px solid var(--primary-color)
+}
+.mb-24 {
+    margin-bottom:24px !important;
+}
+.mb-43 {
+    margin-bottom:43px !important;
+}
+
+.border-top__phancach {
+    border-top-style: solid;
+    border-top-width: medium;
+    border-top-color:var(--primary-color)
+}
+.text-color-transparent {
+    color:transparent;
+}
+.display-none {
+    display:none !important;
+}
+/* đây là nút " Xóa Tất Cả " các tùy chọn trong Tìm kiếm sản phẩm bên grid__column-2 */
+.all-delete__btn {
+    margin-top:12px;
+    padding:10px 88px; 
+    color:var(--white-color); 
+    background-color:var(--primary-color); 
+    border:none;
+}
+.all-delete__btn:hover {
+    cursor:pointer;
+    color:var(--primary-color);
+    background-color:var(--text-color)
+}
+
+/* Google Fonts: Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Responsive */
+.grid {
+    width:1200px;
+    max-width:100%;
+    margin:0 auto;
+}
+.grid__full-width {
+    width:100%;
+}
+.grid__row {
+    display:flex;
+    flex-wrap:wrap;
+    margin-left:-12px;
+    margin-right:-12px;
+}
+/* Cột: chứa danh mục hàng */
+.grid__column-2 {
+    flex:2;
+    padding:0 12px;
+}
+/* Cột: chứa các sản phẩm */
+.grid__column-10 {
+    flex:8;
+    padding:0 12px;
+}
+.grid__column-2-4 {
+    flex:8;
+    padding:0 12px;
+    /* padding-left:0;
+    margin-right:0;
+    width:20%; */
+}
+/* Hiệu ứng khi hover vào Item " Tải ứng dụng" sẽ hiện lên mã Qr code */
+@keyframes fadeIn {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+/* Button Style */
+.btn {
+    min-width:124px;
+    height:34px;
+    text-decoration:none;
+    border:none;
+    border-radius:2px;
+    font-size:1.5rem;
+    padding:0 12px;
+    outline:none;
+    cursor:pointer;
+    color:var(--black-color);
+    line-height:1.6rem;
+    /* display:inline-flex; */
+}
+.btn .btn--normal:hover {
+    background-color:rgba(0, 0, 0, 0.5);
+}
+.btn--primary {
+    background-color:var(--primary-color);
+    color:var(--white-color);
+}
+.btn--primary:hover {
+    background-color:var(--text-color);
+    color:var(--primary-color);
+}
+/* Dùng để Vô hiệu hóa các nút khi không dùng */
+.btn--disabled {
+    cursor:default;
+    background-color:#f3f3f3;
+    color:#333;
+}
+.btn--size-s {
+    height:32px;
+    font-size:12px;
+    padding:0 8px;
+}
+
+/* Nút Gi á và bảng tùy chọn phân loại tìm kiếm */
+.selection-input {
+    Padding: 0 12px; 
+    height:34px; 
+    border-radius:2px; 
+    background-color:var(--white-color); 
+    min-width:200px; 
+    display:flex; 
+    justify-content: space-between; 
+    align-items:center;
+    position:relative;
+    z-index:1;
+}
+
+/* Hover vào Gi á sẽ hiển thị bảng tùy chọn tìm kiếm sản phẩm */
+.selection-input:hover .selection-input__list {
+    display:block;
+}
+.selection-input__label {
+    font-size:1.4rem;
+}
+.selection-input__icons {
+    font-size:1.4rem;
+    color:rgb(131, 131, 131);
+    position:relative;
+    top:1px;
+}
+.selection-input__list {
+    position:absolute; 
+    left:0; 
+    right:0; 
+    top:25px; 
+    border-radius:2px; 
+    background-color: var(--white-color); 
+    padding: 8px 16px; 
+    list-style-type:none;
+    display:none;
+    z-index:2;
+}
+.selection-input__link {
+    font-size:1.4rem; 
+    color:var(--black-color); 
+    text-decoration:none; 
+    display:block; 
+    padding: 4px 0;
+}
+.selection-input__link:hover {
+    color:var(--primary-color);
+}
+
+/* Các nút chuyển trang */
+.pagination {
+    display:flex; 
+    justify-content:center; 
+    align-items:center;
+    list-style-type: none;
+}
+.home-product__pagination {
+    margin-top:50px;
+    margin-bottom:30px;
+}
+.pagination-item {
+    margin:0 14px;
+}
+.pagination-item__link {
+    text-decoration:none;
+    font-size:1.6rem;
+    color:#939393;
+    min-width:40px;
+    height:30px;
+    --height:30px;
+    display:block;
+    text-align:center;
+    line-height:30px;
+    border-radius:2px;
+    font-size:2rem;
+    font-weight:300;
+}
+.pagination-item--active.pagination-item__link {
+    background-color:var(--primary-color);
+    color:var(--white-color);
+}
+.pagination-item--active.pagination-item__link:hover {
+    background-color:var(--primary-color);
+    cursor:pointer;
+}
+
+/* Giao diện Modal */
+.modal {
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    display:flex;
+    animation: fadeIn linear 0.1s;
+}
+.modal {
+    display:none;
+}
+.modal__body {
+    background-color:var(--white-color);
+    position:relative;
+    margin:auto;
+    z-index:1;
+    border-radius:5px;
+    animation: growth linear 0.1s;
+    --growth-from: 0.7;
+    --growth-to:1;
+}
+.modal__overlay {
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.4);
+    z-index:0;
+}
+/* Modal Animation */
+@keyframes growth {
+    from {
+        transform:scale(var(--growth-from));
+    }
+    to {
+        transform:scle(var(--growth-to));
+    }
+}
+

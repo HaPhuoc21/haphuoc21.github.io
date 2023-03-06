@@ -1,0 +1,51 @@
+/* Mobile: width <= 740px */
+@media only screen and (max-width:46.25em) {
+    .slideshow-tablet {
+        display:none;
+    }
+    .grid__column-2 {
+        display:none !important;
+    }
+    .header__navbar {
+        display:none;
+    }
+    .header__with-search {
+        padding-top:16px;
+    }
+    .header__logo {
+        display:none;
+    }
+    .header__search-history {
+        display:none !important;
+    }
+    .header__search-selection--label {
+        display:none;
+    }
+    .header__cart {
+        display:none;
+    }
+}
+
+/* Tablet: width >= 740px and <= 1023px */
+@media only screen and (min-width:46.25em) and (max-width:63.9375em) {
+    .grid__column-2 {
+        display:none !important;
+    }
+    /* Những thẻ có tên class như bên dưới thì khi truy cập bằng Tablet sẽ bị ẩn đi */
+    .table-none {
+        display:none !important;
+    }
+    .header-mobile--cart {
+        display:none;
+    }
+}
+
+/* PC: width >= 1023px */
+@media only screen and (min-width:63.9375em) {
+    .slideshow-tablet {
+        display:none;
+    }
+    .header-mobile--cart {
+        display:none;
+    }
+}
